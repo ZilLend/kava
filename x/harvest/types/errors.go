@@ -45,4 +45,8 @@ var (
 	ErrMarketNotFound = sdkerrors.Register(ModuleName, 19, "no market found for denom")
 	// ErrPriceNotFound error for when a price for the input market is not found
 	ErrPriceNotFound = sdkerrors.Register(ModuleName, 20, "no price found for market")
+	// ErrBorrowedCoinsNotFound error for when the total amount of borrowed coins cannot be found
+	ErrBorrowedCoinsNotFound = sdkerrors.Register(ModuleName, 21, "no borrowed coins found")
+	// ErrNegativeBorrowedCoins error for when substracting coins from the total borrowed balance results in a negative amount
+	ErrNegativeBorrowedCoins = sdkerrors.Register(ModuleName, 22, "subtraction results in negative borrow amount")
 )
