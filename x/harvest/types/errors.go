@@ -49,4 +49,6 @@ var (
 	ErrBorrowedCoinsNotFound = sdkerrors.Register(ModuleName, 21, "no borrowed coins found")
 	// ErrNegativeBorrowedCoins error for when substracting coins from the total borrowed balance results in a negative amount
 	ErrNegativeBorrowedCoins = sdkerrors.Register(ModuleName, 22, "subtraction results in negative borrow amount")
+	// ErrGreaterThanAssetBorrowLimit error for when a proposed borrow would increase borrowed amount over the asset's global borrow limit
+	ErrGreaterThanAssetBorrowLimit = sdkerrors.Register(ModuleName, 23, "fails global asset borrow limit validation")
 )
